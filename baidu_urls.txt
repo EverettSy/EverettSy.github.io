@@ -1,3 +1,4 @@
+http://www.syraven.top/泛型学习.html
 http://www.syraven.top/Dubbo.html
 http://www.syraven.top/SpringBoot文件上传集成Swagger生成RESTful规范API文档.html
 http://www.syraven.top/MySql Erro.html
