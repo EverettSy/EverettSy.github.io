@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
+    <title><![CDATA[关于泛型]]></title>
     <url>%2F%E6%B3%9B%E5%9E%8B%E5%AD%A6%E4%B9%A0.html</url>
-    <content type="text"><![CDATA[title: 关于泛型author: Raventags: 泛型categories: Java基础学习date: 2019年5月3日21:46:09 关于泛型:**[TOC] 1.为什么需要泛型1.1 使用集合时可能会发生安全的问题：可以向集合中放入任何类型1.2 麻烦：从集合中获取元素,需要进行类型的强制转换2.使用泛型：使用泛型方法、泛型类 3.定义泛型3.1：定义泛型类： 按照规则来定义3.1.1 声明类(接口)时,在类名的后面,大括号的前面利用&lt;&gt; 来声明泛型。在类中凡是可以使用类型的地方都可以使用类中声明的泛型.1public class Dao&lt;T&gt; 3.2：定义泛型方法3.2.1 在类(不一定是泛型类)中使用泛型方法.3.2.2 在方法的返回值前面使用 &lt;&gt; 声明泛型类型，则在方法的返回值,参数,方法体中都可以使用该类型4.通配符4.1 如果Foo是Bar的一个子类型(子类或接口),而G是某种泛型声明.1234那么G&lt;Foo&gt;是G&lt;Bar&gt;的子类型并不成立:Person 是Object的子类,但List&lt;Person&gt;却不是List&lt;Object&gt;的子类！printPersons(List&lt;Person&gt; persons); 该方法的参数只能是Person类型的List,而不能是Person 任何子类的List,例如Student类型的ListCollection&lt;?&gt; 4.2 Collection&lt;?&gt;4.2.1 它的元素类型可以匹配任何类型. ? 被称为通配符.4.2.2 将任意元素加入其中不是类型安全的,null除外！ 因为null 可以是任何类型4.3 Collection&lt;? extends Person&gt;为带上限的通配符：该类型可以指向Person类型及Person子类类型的集合。但，也不能向其中放null以外的任何元素.]]></content>
+    <content type="text"><![CDATA[关于泛型[TOC] 1.为什么需要泛型1.1 使用集合时可能会发生安全的问题：可以向集合中放入任何类型1.2 麻烦：从集合中获取元素,需要进行类型的强制转换2.使用泛型：使用泛型方法、泛型类 3.定义泛型3.1：定义泛型类： 按照规则来定义3.1.1 声明类(接口)时,在类名的后面,大括号的前面利用&lt;&gt; 来声明泛型。在类中凡是可以使用类型的地方都可以使用类中声明的泛型.1public class Dao&lt;T&gt; 3.2：定义泛型方法3.2.1 在类(不一定是泛型类)中使用泛型方法.3.2.2 在方法的返回值前面使用 &lt;&gt; 声明泛型类型，则在方法的返回值,参数,方法体中都可以使用该类型4.通配符4.1 如果Foo是Bar的一个子类型(子类或接口),而G是某种泛型声明.1234那么G&lt;Foo&gt;是G&lt;Bar&gt;的子类型并不成立:Person 是Object的子类,但List&lt;Person&gt;却不是List&lt;Object&gt;的子类！printPersons(List&lt;Person&gt; persons); 该方法的参数只能是Person类型的List,而不能是Person 任何子类的List,例如Student类型的ListCollection&lt;?&gt; 4.2 Collection&lt;?&gt;4.2.1 它的元素类型可以匹配任何类型. ? 被称为通配符.4.2.2 将任意元素加入其中不是类型安全的,null除外！ 因为null 可以是任何类型4.3 Collection&lt;? extends Person&gt;为带上限的通配符：该类型可以指向Person类型及Person子类类型的集合。但，也不能向其中放null以外的任何元素.]]></content>
+      <categories>
+        <category>Java基础学习</category>
+      </categories>
+      <tags>
+        <tag>泛型</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Dubbo入门事件---搭建一个最简单的Demo框架]]></title>
@@ -37,8 +43,8 @@
         <category>MySQL</category>
       </categories>
       <tags>
-        <tag>Centos</tag>
         <tag>MySQL</tag>
+        <tag>Centos</tag>
       </tags>
   </entry>
   <entry>
