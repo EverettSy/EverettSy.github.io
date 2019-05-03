@@ -126,7 +126,7 @@
 <meta property="og:site_name" content="EverettSy Blog">
 <meta property="og:description" content="前几天在Java知音看到这篇文章，刚好出去面试的时候被问到很多次HashMap和LinkedHashMap，就做个记录。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-01T12:21:32.505Z">
+<meta property="og:updated_time" content="2019-05-03T13:47:33.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LinkedHashMap和HashMap的比较使用">
 <meta name="twitter:description" content="前几天在Java知音看到这篇文章，刚好出去面试的时候被问到很多次HashMap和LinkedHashMap，就做个记录。">
@@ -398,8 +398,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/java基础学习/" itemprop="url" rel="index">
-                    <span itemprop="name">java基础学习</span>
+                  <a href="/categories/Java基础学习/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础学习</span>
                   </a>
                 </span>
 
@@ -475,15 +475,18 @@
 <h6 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"><span class="keyword">import</span> java.util.LinkedHashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 〈一句话功能简述〉&lt;br&gt; </span></span><br><span class="line"><span class="comment"> * 〈〉</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> YuSong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2018/6/4</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@since</span> 1.0.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestLinkedHashMap</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"******LinkedHashMap******"</span>);</span><br><span class="line">        Map&lt;Integer,String&gt; map = <span class="keyword">new</span> LinkedHashMap&lt;Integer, String&gt;();</span><br><span class="line">        map.put(<span class="number">6</span>,<span class="string">"apple"</span>);</span><br><span class="line">        map.put(<span class="number">3</span>,<span class="string">"banana"</span>);</span><br><span class="line">        map.put(<span class="number">2</span>,<span class="string">"pear"</span>);</span><br><span class="line">        map.put(<span class="keyword">null</span>,<span class="string">"orange"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(Iterator it = map.keySet().iterator();it.hasNext();)</span><br><span class="line">        &#123;</span><br><span class="line">            Object key = it.next();</span><br><span class="line">            System.out.println(key+<span class="string">"="</span>+map.get(key));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"******HashMap******"</span>);</span><br><span class="line">        Map&lt;Integer,String&gt; map1 = <span class="keyword">new</span> HashMap&lt;Integer, String&gt;();</span><br><span class="line">        map1.put(<span class="number">6</span>,<span class="string">"apple"</span>);</span><br><span class="line">        map1.put(<span class="number">3</span>,<span class="string">"banana"</span>);</span><br><span class="line">        map1.put(<span class="number">2</span>,<span class="string">"pear"</span>);</span><br><span class="line">        map1.put(<span class="keyword">null</span>,<span class="string">""</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (Iterator it = map1.keySet().iterator();it.hasNext();)</span><br><span class="line">        &#123;</span><br><span class="line">            Object key = it.next();</span><br><span class="line">            System.out.println(key+<span class="string">"="</span>+map1.get(key));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h6 id="运行结果如下："><a href="#运行结果如下：" class="headerlink" title="运行结果如下："></a>运行结果如下：</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">******LinkedHashMap******</span><br><span class="line"><span class="number">6</span>=apple</span><br><span class="line"><span class="number">3</span>=banana</span><br><span class="line"><span class="number">2</span>=pear</span><br><span class="line"><span class="keyword">null</span>=orange</span><br><span class="line">******HashMap******</span><br><span class="line"><span class="keyword">null</span>=</span><br><span class="line"><span class="number">2</span>=pear</span><br><span class="line"><span class="number">3</span>=banana</span><br><span class="line"><span class="number">6</span>=apple</span><br></pre></td></tr></table></figure>
 <h5 id="分析：LinkedHashMap-的特点是put进去的对象位置未发生变化-而HashMap会发生变化。"><a href="#分析：LinkedHashMap-的特点是put进去的对象位置未发生变化-而HashMap会发生变化。" class="headerlink" title="分析：LinkedHashMap 的特点是put进去的对象位置未发生变化,而HashMap会发生变化。"></a>分析：LinkedHashMap 的特点是put进去的对象位置未发生变化,而HashMap会发生变化。</h5><h6 id="java为数据结构中的映射定义了一个Map接口，Java-中的-Map-接口是和-Collection接口同一等级的集合根接口，它表示一个键值对-key-value-的映射。"><a href="#java为数据结构中的映射定义了一个Map接口，Java-中的-Map-接口是和-Collection接口同一等级的集合根接口，它表示一个键值对-key-value-的映射。" class="headerlink" title="java为数据结构中的映射定义了一个Map接口，Java 中的 Map 接口是和 Collection接口同一等级的集合根接口，它表示一个键值对 (key-value) 的映射。"></a>java为数据结构中的映射定义了一个Map接口，Java 中的 Map 接口是和 Collection接口同一等级的集合根接口，它表示一个键值对 (key-value) 的映射。</h6><h5 id="Map的实现类主要有4种"><a href="#Map的实现类主要有4种" class="headerlink" title="Map的实现类主要有4种:"></a>Map的实现类主要有4种:</h5><ul>
-<li>Hashtable<ul>
+<li><p>Hashtable</p>
+<ul>
 <li>古老，线程安全</li>
 </ul>
 </li>
-<li>HashMap<ul>
+<li><p>HashMap</p>
+<ul>
 <li>速度很快，但没有顺序，非线程安全</li>
 </ul>
 </li>
-<li>TreeMap<ul>
+<li><p>TreeMap</p>
+<ul>
 <li>有序的，效率比HashMap低</li>
 </ul>
 </li>
@@ -1395,4 +1398,5 @@ var jiathis_config={
   <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/love.js"></script> 
   
-<script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+</body>
+</html>
